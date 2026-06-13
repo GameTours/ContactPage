@@ -1,0 +1,50 @@
+---
+import { date } from "astro:schema";
+
+const today = new Date().toLocaleDateString('en-us', {
+	year: 'numeric',
+	month: 'short',
+	day: 'numeric',
+});
+
+const year = new Date();
+---
+
+<footer>
+	Made in the UK with love ❤️
+	<br> <br>
+	&copy; {year.getFullYear()} | jtyoung.me <br>All rights reserved.
+	<br><br>All photos seen on this site are not for re-use. <a href="/licencing">View licencing information here.</a><br><br>
+
+	<p class="smallfootertext">Want to know the technical details behind this website and how it was constructed? Visit the <a href="/construction">technical details page.</a></p>
+		
+	<p class="smallfootertext">Built {today} by Joe Young</p>
+
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 6em 1em;
+		background: rgb(251, 243, 255);
+		color: rgb(var(--gray));
+		text-align: center;
+		margin-top: auto;
+		/* box-shadow: 0 -3px 10px 3px rgba(0, 0, 0, 0.2);    not in use currently - old shadow style. */
+		box-shadow: 0 -6px 6px rgba(var(--black), 5%);
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+	.smallfootertext {
+		font-size: 15px;
+	}
+</style>

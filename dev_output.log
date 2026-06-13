@@ -1,0 +1,14 @@
+
+> users-joeyoung-jtyoung-me@0.0.1 dev
+> astro dev
+
+[vite] connected.
+11:41:13 [types] Generated 1ms
+[vite] connected.
+11:41:13 [content] Syncing content
+11:41:13 [content] Synced content
+11:41:13 [vite] Re-optimizing dependencies because lockfile has changed
+ astro  v6.4.6 ready in 879 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+11:41:13 watching for file changes...
