@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/*
+  Tailwind v4 Preflight resets element styles.
+  Our custom styles below are NOT in a @layer, so they have
+  higher specificity and will override Preflight as intended.
+*/
+
 :root {
 	--accent: #5200b1;
 	--accent-dark: #00031f;
@@ -11,22 +17,8 @@
 	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
-@font-face {
-	font-family: 'Brevia';
-	src: url('/fonts/Regular.ttf') format('ttf');
-	font-weight:400;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Brevia';
-	src: url('/fonts/Bold.ttf') format('ttf');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
 body {
-	font-family: 'Brevia', sans-serif;
+	font-family: 'expressway', sans-serif;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -35,20 +27,32 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+	font-size: 24px;
+	line-height: 1.2;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	font-style: normal;
 }
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);
-	margin: auto;
+	margin: 0 auto;
 	padding: 3em 1em;
 }
-h1,
-h2,
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	margin: 0 0 0.5rem 0;
+	color: rgb(var(--black));
+	line-height: 1.2;
+	font-weight: 800;
+	font-style: normal;
+	font-size: 30px;
+}
 h3,
 h4,
 h5,
@@ -65,12 +69,15 @@ h2 {
 }
 h3 {
 	font-size: 1.953em;
+	font-weight: 700;
 }
 h4 {
 	font-size: 1.563em;
+	font-weight: 700;
 }
 h5 {
 	font-size: 1.25em;
+	font-weight: 700;
 }
 strong,
 b {
@@ -78,6 +85,7 @@ b {
 }
 a {
 	color: var(--accent);
+	text-decoration: none;
 }
 a:hover {
 	color: var(--accent);
@@ -150,9 +158,4 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
-}
-
-
-a {
-	text-decoration: none;
 }

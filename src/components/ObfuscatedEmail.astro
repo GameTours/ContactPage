@@ -1,0 +1,41 @@
+---
+interface Props {
+  email: string;
+  class?: string;
+}
+
+const { email, class: className } = Astro.props;
+
+// Encode the email to base64 at build/server-side to hide it from plain text scraping
+const encoded = Buffer.from(email).toString('base64');
+
+// Fallback text format: name [at] domain [dot] com
+const fallback = email.replace('@', ' [at] ').replace(/\./g, ' [dot] ');
+---
+
+<a
+  href="#"
+  data-email={encoded}
+  data-obfuscated-email
+  class={className}
+>
+  <span>{fallback}</span>
+</a>
+
+<script>
+  // Run this client-side to decode and restore the email link
+  const emailLinks = document.querySelectorAll('a[data-obfuscated-email]');
+  
+  emailLinks.forEach((link) => {
+    const encoded = link.getAttribute('data-email');
+    if (encoded) {
+      try {
+        const decoded = atob(encoded);
+        link.setAttribute('href', `mailto:${decoded}`);
+        link.textContent = decoded;
+      } catch (e) {
+        console.error('Failed to decode obfuscated email:', e);
+      }
+    }
+  });
+</script>

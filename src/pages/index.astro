@@ -2,31 +2,32 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ObfuscatedEmail from '../components/ObfuscatedEmail.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-	<!-- <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} /> -->
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<!-- <Header /> -->
+	<Header />
 	<body>
 		<main>
 			<h1>Contact</h1>
 			<h2>
-               Want to contact me?
+               Hello! Nice to meet you 
 			</h2>
+				<br>
 			<p>
-				The best place to find me online is usually on Threads or Instagram.
+				I am online on Instagram, Facebook and with email.
 			</p>
-			<p>Follow me at <a href="https://instagram.com/young.jty">@young.jty on Instagram</a></p>
-			<p>Or on Threads with the same handle <a href="https://threads.net/young.jty">@young.jty</a></p>
-			<br>
-			<p>However, if you'd like to contact me with email. Send a message to <a href="mailto:webmaster@jtyoung.me">webmaster@jtyoung.me</a></p>
+			<p>Follow me at <a href="https://instagram.com/young.jty" target="_blank" rel="noopener noreferrer">@young.jty</a> on Instagram</p>
+			<p>I'm on Facebook at <a href="https://facebook.com/jtyoungme/" target="_blank" rel="noopener noreferrer">https://facebook.com/jtyoungme/</a></p>
+				<br>
+			<p>If you'd like to contact me with email. Send a message to <ObfuscatedEmail email="webmaster@jtyoung.me" /></p>
 
 		</main>
-		<!-- <Footer /> -->
 	</body>
 	<style>
 		/* Override H2  element styles for this page only... */
@@ -38,3 +39,4 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	</style>
 </html>
+ 
