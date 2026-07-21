@@ -8,5 +8,8 @@ export default defineConfig({
     integrations: [mdx(), sitemap()],
     vite: {
         plugins: [tailwindcss()],
+        ssr: {
+            noExternal: ['@tailwindcss/vite'],
+        },
     },
 });
