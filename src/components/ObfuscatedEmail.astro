@@ -7,7 +7,7 @@ interface Props {
 const { email, class: className } = Astro.props;
 
 // Encode the email to base64 at build/server-side to hide it from plain text scraping
-const encoded = Buffer.from(email).toString('base64');
+const encoded = Buffer.from(email).toString('base64'); 
 
 // Fallback text format: name [at] domain [dot] com
 const fallback = email.replace('@', ' [at] ').replace(/\./g, ' [dot] ');
