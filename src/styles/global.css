@@ -41,18 +41,8 @@ main {
 	padding: 3em 1em;
 }
 
-h1 {
-	font-size: 36px;
-}
-
-h2 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-	font-weight: 800;
-	font-style: normal;
-	font-size: 30px;
-}
+h1,
+h2,
 h3,
 h4,
 h5,

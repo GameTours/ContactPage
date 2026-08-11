@@ -1,6 +1,4 @@
 ---
-import { date } from "astro:schema";
-
 const today = new Date().toLocaleDateString('en-us', {
 	year: 'numeric',
 	month: 'short',
@@ -30,19 +28,6 @@ const year = new Date();
 		margin-top: auto;
 		/* box-shadow: 0 -3px 10px 3px rgba(0, 0, 0, 0.2);    not in use currently - old shadow style. */
 		box-shadow: 0 -6px 6px rgba(var(--black), 5%);
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
 	}
 	.smallfootertext {
 		font-size: 15px;
