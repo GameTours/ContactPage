@@ -26,3 +26,4 @@ pnpm-debug.log*
 # left over files not required for project, for environment setup and vscode.
 .vscode/
 environment.md
+.github/
