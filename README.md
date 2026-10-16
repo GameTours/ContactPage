@@ -7,3 +7,4 @@ Any assets (images, etc.) are not to be re-used, as they are licensed separately
 \
 \
 The site is written in the Astro framework with a focus on performance and quick loading without any of the junk that the modern web is often full of. The page was based on the Astro theme in the tutorial docs.  https://docs.astro.build/en/tutorial/0-introduction/ . More details regarding the technical details and how the site is made are available at https://jtyoung.me/construction/ .
+
